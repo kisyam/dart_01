@@ -1,18 +1,29 @@
+enum Team { arsenal, manUnited }
+
+enum XPLevel { beginner, medium, pro }
+
 class Player {
   String name;
-  int xp;
-  String team;
+  XPLevel xp;
+  Team team;
 
   Player({
     required this.name,
     required this.xp,
     required this.team,
   });
+
+  void sayHello() {
+    print("say Hello");
+  }
 }
 
+//* Cascade Notation
 void main() {
-  var ys = Player(name: 'nico', xp: 1200, team: 'red')
+  var ys = Player(name: 'nico', xp: XPLevel.pro, team: Team.arsenal);
+  var hi = ys
     ..name = 'ys'
-    ..xp = 11
-    ..team = 'Arsenal';
+    ..xp = XPLevel.medium
+    ..team = Team.manUnited
+    ..sayHello();
 }
