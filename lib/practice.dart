@@ -1,8 +1,17 @@
+//* Abstract class
+abstract class Human {
+  void walk();
+}
+
+abstract class Alien {
+  void fly();
+}
+
 enum Team { arsenal, manUnited }
 
 enum XPLevel { beginner, medium, pro }
 
-class Player {
+class Player extends Human {
   String name;
   XPLevel xp;
   Team team;
@@ -15,6 +24,25 @@ class Player {
 
   void sayHello() {
     print("say Hello");
+  }
+
+  @override
+  void walk() {
+    print("walking");
+  }
+}
+
+class Coach extends Human {
+  @override
+  void walk() {
+    print('the coach is walking');
+  }
+}
+
+class Child extends Alien {
+  @override
+  void fly() {
+    // TODO: implement walk
   }
 }
 
