@@ -1,5 +1,5 @@
 class Strong {
-  final double strengthLevel = 1599.1;
+  static const double strengthLevel = 1599.1;
 }
 
 class QuickRunner {
@@ -27,7 +27,7 @@ class Horse with Strong, QuickRunner {}
 void main() {
   var player = Player(team: Team.def);
   player.runQuick();
-  print(player.strengthLevel);
+  Strong.strengthLevel;
 }
 
 //* Mixin은 생성자가 없는 클래스이다. 클래스에 프로퍼티들을 추가할 때 유용하다.
