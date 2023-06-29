@@ -3,7 +3,10 @@ import 'package:practice/screens/loading.dart';
 
 void main() {
   Mother girl = Girl();
-  girl.fn();
+  Girl girls = Girl();
+  girl.hi();
+  girls.hi();
+  girls.hello();
   runApp(const MyApp());
 }
 
@@ -30,8 +33,12 @@ class Girl extends Mother {
   }
 
   @override
-  void fn() {
+  void hi() {
     print("I am a 14yrs old.");
+  }
+
+  void hello() {
+    print('Hello');
   }
 }
 
@@ -40,7 +47,7 @@ class Mother {
     print("i am a mother");
   }
 
-  void fn() {
+  void hi() {
     print("hi");
   }
 }
